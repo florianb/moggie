@@ -1,0 +1,29 @@
+{
+  "name": "moggie",
+  "version": "1.0.0",
+  "description": "moggie wraps a lot meow to support subcommands.",
+  "main": "index.js",
+  "repository": "https://github.com/florianb/moggie",
+  "author": "Florian Breisch <florian.breisch@mindkeeper.solutions>",
+  "license": "MIT",
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "dependencies": {
+    "loud-rejection": "^1.6.0",
+    "meow": "^3.7.0"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "xo": "^0.17.1"
+  },
+  "xo": {
+    "semicolon": false,
+    "rules": {
+      "ava/assertion-arguments": "off"
+    }
+  }
+}
