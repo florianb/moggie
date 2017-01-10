@@ -1,6 +1,6 @@
 {
   "name": "moggie",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "moggie wraps a lot meow to support subcommands.",
   "main": "index.js",
   "repository": "https://github.com/florianb/moggie",
