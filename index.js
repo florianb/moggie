@@ -1,15 +1,17 @@
 'use strict'
-
 const meow = require('meow')
 
 module.exports = function moggie(opts, cli) {
 	opts = Object.assign({
 		argv: process.argv.slice(2),
-		help: false
+		help: false,
+		minimistOptions: {}
 	}, opts)
 
 	if (cli === undefined) {
-		cli = meow(opts)
+		const minimistOptions = opts.minimistOptions
+		delete opts.minimistOptions
+		cli = meow(opts, minimistOptions)
 	}
 
 	if (cli.input.length > 0 &&

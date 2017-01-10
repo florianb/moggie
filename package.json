@@ -21,6 +21,7 @@
     "xo": "^0.17.1"
   },
   "xo": {
+    "esnext": true,
     "semicolon": false,
     "rules": {
       "ava/assertion-arguments": "off"
