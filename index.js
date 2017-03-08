@@ -1,11 +1,22 @@
 'use strict'
+const path = require('path')
+
 const meow = require('meow')
+const readPkgUp = require('read-pkg-up')
+
+// borrowed from meow, to prevent referencing moggies package.json
+// prevent caching of this module so module.parent is always accurate
+delete require.cache[__filename]
+const parentDir = path.dirname(module.parent.filename)
 
 module.exports = function moggie(opts, cli) {
 	opts = Object.assign({
-		argv: process.argv.slice(2),
 		help: false,
-		minimistOptions: {}
+		minimistOptions: {},
+		pkg: readPkgUp.sync({ // borrowed from meow, to prevent referencing moggies package.json
+			cwd: parentDir,
+			normalize: false
+		}).pkg
 	}, opts)
 
 	if (cli === undefined) {

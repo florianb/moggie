@@ -1,6 +1,6 @@
 {
   "name": "moggie",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "moggie wraps a lot meow to support subcommands.",
   "main": "index.js",
   "repository": "https://github.com/florianb/moggie",
@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "loud-rejection": "^1.6.0",
-    "meow": "^3.7.0"
+    "meow": "^3.7.0",
+    "read-pkg-up": "^2.0.0"
   },
   "devDependencies": {
     "ava": "^0.17.0",
